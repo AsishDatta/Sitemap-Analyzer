@@ -15,6 +15,7 @@ function FileUpload() {
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
   const [downloadLink, setDownloadLink] = useState(null);
+  const BACKEND_URL = "https://sitemap-analyzer-rr6e.onrender.com";
 
   const handleFileChange = (e) => setFile(e.target.files[0]);
 
@@ -22,7 +23,7 @@ function FileUpload() {
     if (!file) return alert("Please select a file first.");
     setLoading(true);
     setTimeout(() => {
-      setDownloadLink("http://localhost:5000/api/download");
+      setDownloadLink(`${BACKEND_URL}/api/download`);
       setLoading(false);
     }, 2000);
   };

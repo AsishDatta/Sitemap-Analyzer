@@ -1,6 +1,8 @@
 /* File: src/components/FileUpload.js */
 import React, { useState } from "react";
 import axios from "axios";
+const BACKEND_URL = "https://sitemap-analyzer-rr6e.onrender.com";
+
 
 export default function FileUpload() {
   const [file, setFile] = useState(null);
@@ -16,9 +18,9 @@ export default function FileUpload() {
     formData.append("csvFile", file);
 
     try {
-      const response = await axios.post("http://localhost:5000/api/upload", formData);
+      const response = await axios.post(`${BACKEND_URL}/api/upload`, formData);
       if (response.status === 200) {
-        setDownloadLink("http://localhost:5000/api/download");
+        setDownloadLink(`${BACKEND_URL}/api/download`);
       }
     } catch (error) {
       console.error("Error uploading file:", error);

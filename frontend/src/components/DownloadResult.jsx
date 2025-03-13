@@ -1,8 +1,10 @@
 import React from "react";
 
+const BACKEND_URL = "https://sitemap-analyzer-rr6e.onrender.com";
+
 export default function DownloadResult() {
   const handleDownload = () => {
-    window.open("http://localhost:5000/api/download", "_blank");
+    window.open(`${BACKEND_URL}/api/download`, "_blank");
   };
 
   return (
