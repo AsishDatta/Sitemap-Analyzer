@@ -1,0 +1,94 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #4a90e2, #9013fe);
+    color: rgb(255, 255, 255);
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .card {
+    background: white;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  span {
+    color: #1e7e34;
+    padding: 10px;
+    margin: auto;
+  }
+  
+  .file-label {
+    border: 2px dashed #ccc;
+    padding: 30px;
+    width: 100%;
+    text-align: center;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .file-label:hover {
+    background: #f0f0f0;
+  }
+  
+  .upload-button {
+    width: 100%;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .upload-button.active {
+    background: #007bff;
+  }
+  
+  .upload-button.active:hover {
+    background: #0056b3;
+  }
+  
+  .upload-button.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .download-button {
+    width: 100%;
+    padding: 12px;
+    background: #28a745;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .download-button:hover {
+    background: #1e7e34;
+  }
+  
